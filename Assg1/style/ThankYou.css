@@ -1,0 +1,97 @@
+﻿body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+}
+
+.thank-you-page {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.thank-you-message h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.thank-you-message p {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+.order-summary {
+    text-align: left;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+    .order-summary p {
+        margin: 5px 0;
+        color: #333;
+    }
+
+.help-section {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #6c757d;
+}
+
+    .help-section i {
+        margin-right: 5px;
+    }
+
+.contact-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .contact-link:hover {
+        text-decoration: underline;
+    }
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+    .action-buttons .btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+.btn-view-details {
+    background-color: #5DB996;
+    color: white;
+}
+
+.btn-continue-shopping {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-view-details:hover {
+    background-color: #499c81;
+}
+
+.btn-continue-shopping:hover {
+    background-color: #0056b3;
+}

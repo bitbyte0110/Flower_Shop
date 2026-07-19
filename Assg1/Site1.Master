@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Assg1.Site1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Grace</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style/Site1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    
+    <script>
+        function performSearch() {
+            var query = document.getElementById("searchInput").value.trim();
+            if (query) {
+                window.location.href = 'SearchResults.aspx?q=' + encodeURIComponent(query);
+            } else {
+                alert('Please enter a search term.');
+            }
+        }
+    </script>
+
+</head>
+
+    <!-- Top Bar -->
+    <body class="site-master"> 
+    <div class="top-bar bg-light py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Navigation Links -->
+            <div class="top-nav-links">
+                <a href="/about-us" class="text-muted small">About Us</a>
+                <a href="/faq" class="text-muted small ms-3">FAQ</a>
+            </div>
+
+            <!-- Thank You Message -->
+            <span class="text-muted small">
+                <i class="fas fa-heart text-danger"></i> Thank you for letting us bring smiles to your loved ones!
+            </span>
+
+            <!-- Contact Information -->
+            <span>
+                <i class="fas fa-phone-alt"></i> +011-234-5678
+            </span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="../icons/logo-flower.png" alt="Bloom & Grace Logo" height="50">
+            </a>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search For Flowers">
+                 <button onclick="performSearch()">Search</button>
+            </div>
+
+            <!-- Icons -->
+            <div class="icons d-flex align-items-center">
+                <!-- User Dropdown -->
+                <div class="dropdown-wrapper">
+                    <a href="#" class="text-dark d-flex align-items-center user-dropdown">
+                        <i class="fas fa-user"></i>
+                        <span class="ms-2">
+                            <asp:Label ID="lblName" runat="server"></asp:Label>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/orders" class="dropdown-item">My Orders</a>
+                        <a href="Account.aspx" class="dropdown-item">Profile</a>
+                        <a href="GuestHome.aspx" class="dropdown-item">Log Out</a>
+                    </div>
+                </div>
+
+                <!-- Shopping Cart Icon -->
+                <div class="icons d-flex align-items-center">
+    <!-- Shopping Cart Icon -->
+    <a href="Cart.aspx" class="text-dark position-relative">
+        <i class="fas fa-shopping-cart"></i>
+        <!-- Cart Count -->
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="CartCountLabel" runat="server">0</span>
+    </a>
+    <!-- Cart Total -->
+    <span id="CartTotalLabel" runat="server" class="ms-3">RM 0.00</span>
+</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navigation Links -->
+    <div class="nav-links bg-white shadow-sm">
+        <div class="container">
+            <ul class="nav justify-content-center py-2">
+                <li class="nav-item"><a class="nav-link text-dark" href="Birthday.aspx">Birthday</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="Christmas.aspx">Christmas</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="Graduation.aspx">Graduation</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="Romance.aspx">Romance</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="GrandOpening.aspx">Grand Opening</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Content Placeholder -->
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Logo and Description Section -->
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <a class="navbar-brand" href="#">
+                        <img src="../icons/logo-flower.png" alt="Bloom & Grace Logo" height="50">
+                    </a>
+                    <p class="mt-3" style="max-width: 300px;">
+                        Bloom & Grace transforms nature’s beauty into exquisite floral masterpieces for every cherished moment.
+                    </p>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="col-md-3 mb-5 mb-md-0">
+                    <h5 class="mb-3">General Information</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted">Home</a></li>
+                        <li><a href="#" class="text-muted">About Us</a></li>
+                        <li><a href="#" class="text-muted">Help Centre</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="col-md-3 mb-5 mb-md-0">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <p class="text-muted mb-1">+60 12-3456 7890</p>
+                    <h6 class="fw-bold mt-3">Corporate</h6>
+                    <p class="text-muted mb-1">BnGCorporate@gmail.com</p>
+                    <h6 class="fw-bold mt-3">Marketing</h6>
+                    <p class="text-muted mb-1">BnGMarketing@gmail.com</p>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div class="col-md-2">
+                    <h5 class="mb-3">Our Newsletter</h5>
+                    <p class="text-muted">Subscribe to our newsletter to get updates about our grand offers.</p>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="email" class="form-control" placeholder="Email" />
+                        <button class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="text-center mt-5">
+                <p class="text-muted">&copy; 2025 Bloom & Grace. All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>

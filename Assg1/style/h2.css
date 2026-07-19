@@ -1,0 +1,50 @@
+﻿/* File: styles.css */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-bar {
+    font-size: 0.9em;
+}
+
+.navbar {
+    padding: 10px 0;
+}
+
+
+.search-container {
+    display: flex;
+    width: 50%;
+    max-width: 500px;
+}
+
+    .search-container input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-right: none;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+
+    .search-container button {
+        padding: 10px 20px;
+        background-color: #008cba;
+        border: none;
+        color: white;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+
+.nav-links .nav-link {
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.nav-links .dropdown-menu {
+    border-radius: 4px;
+}
+
+.icons .badge {
+    font-size: 0.75em;
+}

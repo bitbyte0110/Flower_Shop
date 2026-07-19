@@ -1,0 +1,114 @@
+﻿.thank-you-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.thank-you-page {
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px; /* Space from top */
+    padding-bottom: 50px;
+}
+
+    .thank-you-page .thank-you-container {
+        max-width: 1040px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+        /* Heading */
+        .thank-you-page .thank-you-container h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+    /* Email confirmation text */
+    .thank-you-page .email-confirmation {
+        font-size: 16px;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+
+    /* Order summary box */
+    .thank-you-page .order-summary {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+    }
+
+        .thank-you-page .order-summary p {
+            font-size: 16px;
+            margin: 8px 0;
+            line-height: 1.4;
+        }
+
+            .thank-you-page .order-summary p strong {
+                font-weight: 600;
+            }
+
+    /* Actions row (Need help + Buttons) */
+    .thank-you-page .thank-you-actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    /* "Need Help?" text/link */
+    .thank-you-page .need-help {
+        font-size: 14px;
+    }
+
+        .thank-you-page .need-help a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .thank-you-page .need-help a:hover {
+                text-decoration: underline;
+            }
+
+    /* Buttons */
+    .thank-you-page .button-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    /* General button styling */
+    .thank-you-page .btn {
+        display: inline-block;
+        padding: 10px 25px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #5db996;
+        border: none;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+        .thank-you-page .btn:hover {
+            background-color: #4aa184;
+        }
+
+    /* Specific styling for the "View Details" button */
+    .thank-you-page .btn-view-details {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+    }
+
+        .thank-you-page .btn-view-details:hover {
+            background-color: #f2f2f2; /* Lighter gray hover effect */
+            color: #000;
+            border: 1px solid #000;
+        }

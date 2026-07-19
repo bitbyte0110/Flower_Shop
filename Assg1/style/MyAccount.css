@@ -1,0 +1,167 @@
+﻿/* Namespace the styles with .account-page */
+
+/* General */
+.account-page body {
+    background-color: #f8fafc;
+}
+
+.account-page .container {
+    display: flex;
+    margin: 50px 10px;
+}
+
+.account-page .profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-page .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 30px 0 10px 0;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #768499;
+}
+
+.account-page .menu {
+    margin: 0 20px;
+}
+
+.account-page .menu-link {
+    display: block;
+    text-decoration: none;
+    color: #768499;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 200px 10px 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.account-page .menu-icon {
+    margin-right: 10px;
+}
+
+.account-page .menu-link:first-child {
+    color: #fff;
+    background-color: #536dfe;
+}
+
+.account-page .menu-link:hover {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.account-page .menu-link:first-child:hover {
+    background-color: #536dfe;
+    color: #fff;
+}
+
+.account-page .account {
+    flex: 2;
+    margin-left: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    height: max-content;
+}
+
+.account-page .account-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #768499;
+}
+
+.account-page .account-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #1e293b;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.account-page .btn-container {
+    margin: 20px;
+}
+
+.account-page .btn-cancel {
+    width: 8em;
+    height: 3em;
+    cursor: pointer;
+    border: 1px solid #768499;
+    border-radius: 2em;
+    color: #1e293b;
+    font-weight: bold;
+    margin-right: 5px;
+    background-color: #fff;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+    .account-page .btn-cancel:hover {
+        background-color: #f1f5f9;
+    }
+
+.account-page .btn-save {
+    width: 8em;
+    height: 3em;
+    cursor: pointer;
+    border: 1px solid #458ff6;
+    border-radius: 2em;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 5px;
+    background-color: #536dfe;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+    .account-page .btn-save:hover {
+        background-color: #4053c9;
+    }
+
+.account-page .account-edit {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.account-page .input-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+    .account-page .input-container p {
+        font-family: "Poppins", sans-serif;
+        color: #768499;
+        font-size: 14px;
+    }
+
+    .account-page .input-container input {
+        height: 25px;
+        border: 1.5px solid #768499;
+        border-radius: 5px;
+        padding: 5px;
+        color: #768499;
+        font-family: "Poppins", sans-serif;
+    }
+
+.account-page .dll {
+    height: 25px;
+    font-family: "Poppins", sans-serif;
+    color: #768499;
+    font-size: 14px;
+    border: 1.5px solid #768499;
+    border-radius: 5px;
+}
+
+.account-page .input-container input:focus {
+    outline: none;
+    border: 1.5px solid #536dfe;
+}

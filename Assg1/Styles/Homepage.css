@@ -1,0 +1,303 @@
+﻿/* Featured Categories CSS */
+:root {
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --text-color: #333;
+    --bg-color: #F7F9FC;
+    --card-transition: all 0.3s ease-in-out;
+}
+
+.categories {
+    padding: 4rem 0;
+    background-color: var(--bg-color);
+}
+
+    .categories .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .categories h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        color: var(--text-color);
+    }
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: var(--card-transition);
+    background-color: white;
+}
+
+    .category-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    }
+
+    .category-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: var(--card-transition);
+    }
+
+    .category-card:hover img {
+        transform: scale(1.1);
+    }
+
+    .category-card .card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: 0.5s ease;
+    }
+
+    .category-card:hover .card-overlay {
+        height: 100%;
+    }
+
+    .category-card h3 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: 1.5rem;
+        z-index: 1;
+        transition: var(--card-transition);
+    }
+
+    .category-card a {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        text-decoration: none;
+        color: white;
+        background-color: var(--primary-color);
+        padding: 8px 15px;
+        border-radius: 20px;
+        opacity: 0;
+        transition: var(--card-transition);
+    }
+
+    .category-card:hover a {
+        opacity: 1;
+    }
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        max-width: 100%;
+    }
+
+        .category-card img {
+            height: 250px;
+        }
+}
+
+/* Accessibility and Focus States */
+.category-card:focus-within {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+/* Optional: Subtle Animations */
+@keyframes subtle-float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.category-card:hover {
+    animation: subtle-float 1.5s ease infinite;
+}
+
+/* Customer Testimonials CSS */
+/* Root Variables */
+:root {
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --text-color: #333;
+    --bg-light: #F7F9FC;
+    --testimonial-bg: white;
+    --quote-color: #666;
+    --transition-speed: 0.3s;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: var(--bg-light);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+    .testimonials .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .testimonials h2 {
+        font-size: 2.5rem;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+    }
+
+/* Testimonial Grid */
+.testimonial-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background-color: var(--testimonial-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    position: relative;
+    text-align: center;
+}
+
+    .testimonial-card::before {
+        content: '"';
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        font-size: 4rem;
+        color: var(--primary-color);
+        opacity: 0.2;
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-card p {
+        color: var(--quote-color);
+        font-style: italic;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 1;
+    }
+
+/* Customer Info */
+.customer-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+    .customer-info img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 1rem;
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 1/1;
+        border: 3px solid var(--primary-color);
+        transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    }
+
+.testimonial-card:hover .customer-info img {
+    transform: scale(1.1);
+}
+
+.customer-info span {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Star Rating */
+.testimonial-rating {
+    margin-bottom: 1rem;
+}
+
+.star {
+    color: #ddd;
+    font-size: 1.5rem;
+    margin: 0 2px;
+}
+
+    .star.active {
+        color: gold;
+    }
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .testimonial-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .customer-info img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Accessibility and Animations */
+.testimonial-card:focus-within {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+@keyframes float-testimonial {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.testimonial-card:hover {
+    animation: float-testimonial 1.5s ease infinite;
+}
