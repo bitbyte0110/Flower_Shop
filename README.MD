@@ -6,7 +6,7 @@ The Bloom & Grace e-commerce web application is an enterprise-grade retail platf
 
 ![Bloom & Grace Homepage](Assg1/images/homePage.png)
 
-## 🛠️ Tech Stack & Tools
+## Tech Stack & Tools
 * **Frontend / Presentation:** HTML5, CSS3, Bootstrap 5, Font Awesome, jQuery (ASP.NET Unobtrusive Validation Mapping), ASP.NET Web Form Controls
 * **Backend Logic:** C# / ASP.NET Framework (v4.7.2)
 * **Database Management:** Microsoft SQL Server (LocalDB) / ADO.NET (SqlConnection, SqlCommand, SqlDataReader)
