@@ -43,8 +43,8 @@ Follow these steps to configure and run the development environment locally:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/bitbyte0110/bloom-and-grace.git
-cd bloom-and-grace
+git clone https://github.com/bitbyte0110/Flower_Shop.git
+cd Flower_Shop
 ```
 
 ### 2. Configure the Database
